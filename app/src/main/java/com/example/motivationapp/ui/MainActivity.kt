@@ -10,6 +10,7 @@ import com.example.motivationapp.R
 import com.example.motivationapp.data.Mock
 import com.example.motivationapp.infrastructure.SecurityPreferences
 import com.example.motivationapp.databinding.ActivityMainBinding
+import java.util.Locale
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         supportActionBar?.hide()
 
         setListeners()
+        verifyUserName()
         handleFilter(R.id.image_inclusive_all)
     }
 
@@ -39,6 +41,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onResume() {
         super.onResume()
         handleUserName()
+    }
+
+    private fun verifyUserName() {
+        if (SecurityPreferences(this).getString(MotivationConstants.KEY.USER_NAME) == "") {
+            startActivity(Intent(this, UserActivity::class.java))
+        }
     }
 
     private fun setListeners() {
@@ -77,6 +85,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun newPhrase() {
-        binding.textPhrase.text = Mock().getPhrase(category)
+        binding.textPhrase.text = Mock().getPhrase(category, Locale.getDefault().language)
     }
 }
