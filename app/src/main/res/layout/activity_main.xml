@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/layout_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="12dp">
+
+        <ImageView
+            android:id="@+id/image_inclusive_all"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_inclusive_all"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/image_emoji"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_emoji" />
+
+        <ImageView
+            android:id="@+id/image_sunny"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_sunny" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_menu"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/hello"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/image_edit_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/text_user_name"
+        android:layout_below="@id/layout_menu"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_edit" />
+
+    <TextView
+        android:id="@+id/text_phrase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/motivational_phrase"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <View
+        android:id="@+id/view_below_phrase"
+        android:layout_width="164dp"
+        android:layout_height="5dp"
+        android:layout_below="@id/text_phrase"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="@color/dark_purple"
+        android:elevation="5dp" />
+
+    <Button
+        android:id="@+id/button_new_phrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/dark_purple"
+        android:text="@string/new_phrase"
+        android:textAllCaps="true" />
+
+
+</RelativeLayout>
