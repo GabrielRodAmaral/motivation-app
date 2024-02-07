@@ -31,7 +31,7 @@ class Mock {
         Phrase("Se você acredita, faz toda a diferença.", sunny, pt),
         Phrase("Riscos devem ser corridos, porque o maior perigo é não arriscar nada!", sunny, pt),
 
-        Phrase("Overcoming is the art of transforming great challenges into steps to reach the top of the mountain of success.", emoji, pt),
+        Phrase("Overcoming is the art of transforming great challenges into steps to reach the top of the mountain of success.", emoji, en),
         Phrase("Not knowing it was impossible, he went there and did it.", emoji, en),
         Phrase(
             "You are not defeated when you lose, you are defeated when you give up!", emoji, en),
